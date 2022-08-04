@@ -154,6 +154,13 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.4.tgz#0c8b74c50f29ee44f423f7416829c0bf8bb5eb27"
   integrity sha512-LwzQKA4vzIct1zNZzBmRKI9QuNpLgTQMEjsQLf3BXuGYb3QPTP4Yjf6mkdX+X1mYttZ808QpOwAzZjv28kq7DA==
 
+"@slider-captcha/react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@slider-captcha/react/-/react-1.0.0.tgz#d91ed0705022d46d5f999ecd842455ae7d1d371f"
+  integrity sha512-V5DexUldY2KEF24IOg1H6msTrPoCOiImXvBk9J31LiMxzJVg2/MOQWxuFIfYxyT1vmSMRP+HU/sx50PmS2cRQQ==
+  dependencies:
+    prop-types "^15.7.2"
+
 "@swc/helpers@0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.3.tgz#16593dfc248c53b699d4b5026040f88ddb497012"
@@ -1183,6 +1190,11 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
+lodash@^4.17.4:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -1446,7 +1458,7 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prop-types@^15.8.1:
+prop-types@^15.6.0, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -1472,6 +1484,20 @@ react-dom@18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-geetest-captcha@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-geetest-captcha/-/react-geetest-captcha-1.0.3.tgz#570ddcc82a29f8b27f8088e9853225849c4795b8"
+  integrity sha512-0KBO66wkcNBOqy59VacVupwkRVULRo4AliknhDN4x/P2ZJGaZmKsaEcEIMUWBdbTJv+uqoFdW/yEJPpG8c5V6A==
+  dependencies:
+    lodash "^4.17.4"
+    prop-types "^15.6.0"
+    shallow-equal "^1.0.0"
+
+react-geetest@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/react-geetest/-/react-geetest-5.0.1.tgz#0ed2c82309e64532bd82922d931b76ccbc66d1c9"
+  integrity sha512-2UL+PRSGidpjZhHiMib2m6aJ+xxsrJFQUmazAQDDwL+ujsZggmZ7ZBjl9B/SIskVGQ6M3PyHB6BLSt/4dbLmHg==
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -1564,6 +1590,11 @@ semver@^7.3.7:
   integrity sha512-QlYTucUYOews+WeEujDoEGziz4K6c47V/Bd+LjSSYcA94p+DmINdf7ncaUinThfvZyu13lN9OY1XDxt8C0Tw0g==
   dependencies:
     lru-cache "^6.0.0"
+
+shallow-equal@^1.0.0:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/shallow-equal/-/shallow-equal-1.2.1.tgz#4c16abfa56043aa20d050324efa68940b0da79da"
+  integrity sha512-S4vJDjHHMBaiZuT9NPb616CSmLf618jawtv3sufLl6ivK8WocjAo58cXwbRV1cgqxH0Qbv+iUt6m05eqEa2IRA==
 
 shebang-command@^2.0.0:
   version "2.0.0"
