@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useRef } from "react";
-import { RGCaptcha, reset } from "react-geetest-captcha";
+// import { RGCaptcha, reset } from "react-geetest-captcha";
 
 const CAPTCHA_NAME = "a8e44a0ceeb9e282d9be47af7ea5bc9a";
 
@@ -23,7 +23,7 @@ export const WithRGC = () => {
     <form onSubmit={handleSubmit}>
       <p>with RGC</p>
       <input type="text" name="name" placeholder="Name" ref={inputRef} />
-
+      {/* 
       <RGCaptcha
         name={CAPTCHA_NAME}
         width="100%"
@@ -40,7 +40,7 @@ export const WithRGC = () => {
         //     return captcha;
         //   })
         // }
-      />
+      /> */}
 
       <button type="submit" id="submitBtn">
         Submit

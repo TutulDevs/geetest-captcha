@@ -14,7 +14,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-geetest": "^5.0.1",
-    "react-geetest-captcha": "^1.0.3"
+    "react-geetest-captcha": "^1.0.3",
+    "react-hot-toast": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "18.6.3",

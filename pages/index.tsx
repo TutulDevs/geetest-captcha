@@ -11,7 +11,20 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <WithEffect />
+      <main>
+        <h2>Geetest Captcha</h2>
+
+        <WithEffect />
+
+        <a
+          href="http://"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="githubLink"
+        >
+          GitHub
+        </a>
+      </main>
     </>
   );
 };

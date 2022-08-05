@@ -1,8 +1,6 @@
 import { FormEvent, useEffect, useRef } from "react";
 import GT4Init from "../funcitons/gt4";
-
-const CAPTCHA_MY = "a8e44a0ceeb9e282d9be47af7ea5bc9a";
-const CAPTCHA_OTHER = "54088bb07d2df3c46b79f80300b0abbe";
+import toast from "react-hot-toast";
 
 export const WithEffect = () => {
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -18,20 +16,16 @@ export const WithEffect = () => {
     // @ts-ignore
     initGeetest4(
       {
-        captchaId: CAPTCHA_OTHER,
+        captchaId: process.env.NEXT_PUBLIC_CAPTCHA_ID,
         product: "bind",
-        riskType: "slide",
-        onError: (err: any) =>
-          console.log("captcha error before loading: ", err),
-
-        // language: "spa",
+        onError: (err: any) => toast.error(err.msg),
       },
       handlerForBind
     );
   }, []);
 
   async function handlerForBind(c: any) {
-    console.log(c);
+    // console.log(c);
 
     const button = btnRef.current;
     var isReady = false;
@@ -53,24 +47,38 @@ export const WithEffect = () => {
       }
     });
 
-    c.onSuccess(() => {
+    c.onSuccess(async () => {
       var result = c.getValidate();
-      console.log("GT success: ", result);
+      // console.log("GT success: ", result);
 
       const inputText = inputRef.current?.value;
-      console.log(inputText);
+
+      toast(() => (
+        <span>
+          Name: {inputText}
+          <br />
+          Pass Token: {result.pass_token}
+        </span>
+      ));
+
+      toast.success("Captcha Success");
     });
 
     c.onError((err: any) => {
-      console.log("GT error: ", err);
+      // console.log("GT error: ", err);
+      toast.error(err.msg);
       c.reset();
     });
     c.onClose(() => {
-      console.log("GT close: ");
+      // console.log("GT close: ");
+      toast.error("Captcha Closed!");
+
       c.reset();
     });
     c.onFail((err: any) => {
-      console.log("GT fail: ", err);
+      // console.log("GT fail: ", err);
+      toast.error("Captcha Failed!");
+
       c.reset();
     });
   }
@@ -91,8 +99,6 @@ export const WithEffect = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <p>with useEffect</p>
-
       <input type="text" name="name" placeholder="Name" ref={inputRef} />
 
       <button type="submit" id="submitBtn" ref={btnRef}>
